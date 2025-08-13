@@ -5,9 +5,15 @@
   "description": "Interactive branching travel H5 (Heilongjiang demo).",
   "scripts": {
     "dev": "npx serve .",
-    "lint": "echo \"(No linter configured)\"
+    "lint": "echo \"(No linter configured)\"",
     "build": "echo \"Static project - nothing to build\""
   },
-  "keywords": ["interactive","video","heilongjiang","wechat","h5"],
+  "keywords": [
+    "interactive",
+    "video",
+    "heilongjiang",
+    "wechat",
+    "h5"
+  ],
   "license": "MIT"
 }

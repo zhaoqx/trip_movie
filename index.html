@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>四季龙江 · 互动小旅程</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="四季龙江互动旅程：极地馆 vs 东北虎林园，选一条线继续观看。" />
+  <link rel="preload" href="assets/video/intro.mp4" as="video" type="video/mp4" />
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="videoWrap">
+      <video id="v" playsinline webkit-playsinline preload="auto" poster="assets/img/cover.jpg" muted></video>
+      <div class="gradient-top"></div>
+      <div class="gradient-bottom"></div>
+      <div id="notice" class="notice fade-in"></div>
+      <div id="loading" class="loading" style="display:none;">
+        <img src="assets/img/loading.svg" alt="loading" />
+        <p>加载中...</p>
+      </div>
+      <div id="choice" class="choice" style="display:none;">
+        <button data-branch="polar" class="btn">极地馆</button>
+        <button data-branch="tiger" class="btn btn-alt">东北虎林园</button>
+      </div>
+      <div id="controls" class="controls" style="display:none;">
+        <button data-action="replay" class="btn small">重播</button>
+        <button data-action="switch" class="btn small btn-alt">走另一条线</button>
+      </div>
+      <div id="subtitle" class="subtitle"></div>
+      <img id="logo" class="logo" src="assets/img/logo.png" alt="Logo" />
+      <div id="startOverlay" class="start-overlay">
+        <div class="inner">
+          <h1>四季龙江 · 互动旅程</h1>
+          <button id="btnStart" class="btn start">进入旅程</button>
+          <p class="hint">建议开启声音 · 可稍后切换分支</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="src/wechat-share.js"></script>
+  <script src="src/metrics.js"></script>
+  <script src="src/subtitle-loader.js"></script>
+  <script type="module" src="src/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(e=>console.warn('SW register fail', e));
+    }
+  </script>
+</body>
+</html>

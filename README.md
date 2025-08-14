@@ -1,3 +1,30 @@
+# 黑龙江旅游视频（自动生成，demo用）
+
+推荐直接用 Python 脚本自动生成 intro.mp4，无需下载素材。
+
+## 生成方法
+
+
+1. （可选）创建并激活 conda 虚拟环境：
+	```bash
+	conda create -n trip_movie_env python=3.10
+	conda activate trip_movie_env
+	```
+2. 安装依赖：
+	```bash
+	conda install -c conda-forge moviepy
+	```
+3. 运行脚本：
+	```bash
+	python scripts/gen_intro_video.py
+	```
+4. 生成的 `intro.mp4` 会自动保存到 `assets/video/` 目录。
+
+如需自定义动画内容，可修改 `scripts/gen_intro_video.py`。
+
+---
+
+> 如遇字体报错，可将脚本中的 FONT 改为 "Arial"、"MSYH" 或本机已安装的中文字体。
 # trip_movie - 黑龙江互动分支旅行 Demo
 
 一个可在微信中打开的 9:16 H5 互动体验 Demo：观看开场 → 19 秒出现选择 → 进入极地馆或东北虎林园分支 → 汇合结尾。  

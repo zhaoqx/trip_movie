@@ -1,0 +1,55 @@
+<!-- 静态示意：雨天水漂与打滑处置步骤 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <style>
+    .bg{fill:#f3f6f8}
+    .card{fill:#fff; stroke:#d0d7de; stroke-width:1; rx:8}
+    .h{font-family:Arial, sans-serif; font-size:16px; fill:#0b3b5d}
+    .step{font-family:Arial, sans-serif; font-size:13px; fill:#07324a}
+    .icon{fill:#1f77b4}
+  </style>
+  <rect class="bg" width="800" height="420"/>
+  <rect class="card" x="16" y="16" width="768" height="388"/>
+
+  <text x="36" y="44" class="h">雨天水漂 / 打滑（简明操作步骤）</text>
+
+  <!-- left: hydroplaning -->
+  <g transform="translate(40,70)">
+    <rect x="0" y="0" width="360" height="320" rx="6" fill="#eef6fb"/>
+    <text x="14" y="28" class="step">水漂（Hydroplaning）</text>
+    <text x="14" y="54" class="step">征兆：方向沉重或失去转向感、发动机转速未随速度变化</text>
+    <text x="14" y="84" class="step">要点：</text>
+    <text x="34" y="106" class="step">1) 立即松油门，稳住方向盘，不要猛打方向</text>
+    <text x="34" y="126" class="step">2) 不要急踩刹车；若必须制动，轻柔短促，或依靠 ABS 自动调节</text>
+    <text x="34" y="146" class="step">3) 车轮重新抓地后再逐步减速并靠右安全停车检查</text>
+
+    <!-- picture -->
+    <g transform="translate(90,164)">
+      <rect x="0" y="0" width="180" height="80" rx="8" fill="#cfe7fb"/>
+      <circle cx="40" cy="40" r="6" fill="#222"/>
+      <circle cx="140" cy="40" r="6" fill="#222"/>
+      <rect x="18" y="10" width="144" height="40" rx="6" fill="#1f77b4"/>
+      <text x="42" y="36" fill="#fff" font-family="Arial" font-size="12">车辆</text>
+      <!-- raindrops -->
+      <g fill="#4da6ff">
+        <path d="M10 10c2-3 6-3 8 0 2 3 0 6-4 10-4-4-6-7-4-10z" transform="translate(-30,-20) scale(1.2)"/>
+        <path d="M10 10c2-3 6-3 8 0 2 3 0 6-4 10-4-4-6-7-4-10z" transform="translate(120,-18) scale(1.1)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- right: skid -->
+  <g transform="translate(420,70)">
+    <rect x="0" y="0" width="360" height="320" rx="6" fill="#fff7eb"/>
+    <text x="14" y="28" class="step">打滑（Skid）与纠正</text>
+    <text x="14" y="54" class="step">后轮打滑（车尾甩出）：</text>
+    <text x="34" y="76" class="step">- 顺舵（向甩出方向转舵），不要猛打方向</text>
+    <text x="34" y="96" class="step">- 轻抬油门或维持少量油门，待车身回正再缓慢修正方向</text>
+    <text x="14" y="128" class="step">前轮打滑（转向不足，车不听方向）：</text>
+    <text x="34" y="150" class="step">- 放松油门，放低速度，逐步减速并适当减角度</text>
+    <text x="14" y="182" class="step">刹车与 ABS：</text>
+    <text x="34" y="204" class="step">- 有 ABS：踩死刹并保持踩下，方向盘若允许可以微调方向</text>
+    <text x="34" y="224" class="step">- 无 ABS：采用点刹法，避免轮胎抱死</text>
+  </g>
+
+  <text x="36" y="360" class="step">提示：遇到极端情况优先保证生命安全并在安全处停车，拍照并联系租车公司/救援。</text>
+</svg>

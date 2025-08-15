@@ -1,0 +1,49 @@
+:root{
+  --ink:#223;
+  --muted:#556;
+  --primary:#2f6feb;
+  --accent:#30a46c;
+  --bg:#f7f9fc;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#f5f7fb;color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+.app-header{padding:16px 20px 8px}
+.app-header h1{margin:0;font-size:20px}
+.subtitle{margin:4px 0 0;color:#667}
+
+.stage-wrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:12px;align-items:start;padding:0 12px 12px}
+.stage{background:#fff;border:1px solid #e4e8f0;border-radius:12px;padding:8px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stage svg{width:100%;height:auto;display:block}
+
+.controls{background:#fff;border:1px solid #e4e8f0;border-radius:12px;padding:12px;position:sticky;top:12px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.step-info{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:600}
+.buttons{display:flex;gap:8px}
+button{appearance:none;border:1px solid #cdd6e1;background:#f9fbff;color:#163; padding:8px 12px;border-radius:8px;cursor:pointer}
+button:hover{background:#eef3ff}
+button:active{transform:translateY(1px)}
+button[disabled]{opacity:.5;cursor:not-allowed}
+
+.tips{margin-top:10px;color:#445}
+.tips summary{cursor:pointer;color:#2b4}
+.app-footer{padding:6px 20px 16px;color:#556;font-size:12px}
+
+.highlight{filter:url(#glow)}
+#captionBg{transition:opacity .35s ease}
+#captionTitle,#captionBody{transition:all .35s ease}
+
+@media (max-width: 960px){
+  .stage-wrap{grid-template-columns:1fr}
+  .controls{position:relative}
+}
+
+/* 动画过渡 */
+#gSeat, #backRotate, #headrest, #gWheel, #gMirrors, #gDriver, #wheel, #gPedals, #insideMirror, #leftMirror, #rightMirror, #brake, #accel {
+  transition: transform .6s cubic-bezier(.22,.61,.36,1), x .6s, y .6s;
+}
+
+/* 小提示标签样式（由脚本添加） */
+.callout-badge{
+  font-size:12px;
+  fill:#fff;
+}

@@ -1,0 +1,65 @@
+<!-- Animated SVG: 安全跟车距离示意（速度与时间差） -->
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="240" viewBox="0 0 800 240">
+  <style>
+    .road{fill:#3b3b3b}
+    .divider{fill:#f7f7f7}
+    .carA{fill:#1f77b4}
+    .carB{fill:#ff7f0e}
+    .text{font-family:Arial, sans-serif; font-size:14px; fill:#ffffff}
+    .note{font-size:12px; fill:#000}
+    .gap {fill:rgba(255,255,255,0.06)}
+    @keyframes move {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-200px); }
+    }
+  </style>
+
+  <rect x="0" y="0" width="800" height="240" fill="#e9eef3"/>
+  <!-- road -->
+  <rect class="road" x="40" y="40" width="720" height="160" rx="6"/>
+  <!-- center divider -->
+  <g>
+    <rect class="divider" x="80" y="116" width="40" height="8" rx="2"/>
+    <rect class="divider" x="160" y="116" width="40" height="8" rx="2"/>
+    <rect class="divider" x="240" y="116" width="40" height="8" rx="2"/>
+    <rect class="divider" x="320" y="116" width="40" height="8" rx="2"/>
+    <rect class="divider" x="400" y="116" width="40" height="8" rx="2"/>
+    <rect class="divider" x="480" y="116" width="40" height="8" rx="2"/>
+    <rect class="divider" x="560" y="116" width="40" height="8" rx="2"/>
+    <rect class="divider" x="640" y="116" width="40" height="8" rx="2"/>
+  </g>
+
+  <!-- cars group (animated left) -->
+  <g id="cars" style="transform-box: fill-box; animation: move 6s linear infinite;">
+    <!-- leading car -->
+    <g transform="translate(520,70)">
+      <rect class="carA" x="0" y="40" width="120" height="50" rx="8"/>
+      <rect x="10" y="50" width="100" height="20" fill="#fff" opacity="0.08"/>
+      <circle cx="20" cy="96" r="6" fill="#222"/>
+      <circle cx="100" cy="96" r="6" fill="#222"/>
+    </g>
+    <!-- following car -->
+    <g transform="translate(320,70)">
+      <rect class="carB" x="0" y="40" width="110" height="50" rx="8"/>
+      <rect x="10" y="50" width="90" height="20" fill="#fff" opacity="0.06"/>
+      <circle cx="20" cy="96" r="6" fill="#222"/>
+      <circle cx="90" cy="96" r="6" fill="#222"/>
+    </g>
+    <!-- gap highlight -->
+    <rect class="gap" x="430" y="80" width="60" height="60" rx="4"/>
+  </g>
+
+  <!-- labels -->
+  <text x="50" y="30" class="note">示意：保持时间间隔（秒）比固定米数更实用；速度越快，需的米数越大。</text>
+  <text x="60" y="210" class="note">建议：干燥路面 ≥2秒；省道/弯多 ≥3秒；雨天/湿滑 ≥4~5秒。</text>
+
+  <!-- legend boxes -->
+  <rect x="600" y="50" width="160" height="100" rx="6" fill="#fff" opacity="0.9"/>
+  <text x="612" y="72" class="note" fill="#000">参考距离（近似）</text>
+  <text x="612" y="92" class="note" fill="#000">50 km/h ≈ 28 m (2s)</text>
+  <text x="612" y="112" class="note" fill="#000">80 km/h ≈ 44 m (2s)</text>
+  <text x="612" y="132" class="note" fill="#000">100 km/h ≈ 56 m (2s)</text>
+
+  <!-- footer -->
+  <text x="40" y="228" class="note">使用方法：用路标或路边固定物（灯杆）做参考，前车经过时开始计秒（“一一一一”），到你车经过同一点不足 2 秒即太近。</text>
+</svg>
